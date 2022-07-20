@@ -37,9 +37,10 @@ export const TriangleContainer = styled.div`
     }
 `
 export const Container = styled.div`
-    margin: 1.2em 1.7em 0 1.2em;
+    margin: 0 1.7em 0 1.2em;
     padding-bottom: 6em;
     h3{
+        margin: 0;
         padding 2em 0 1em 0;
         font-size: 2em;
         font-weight: 500;
