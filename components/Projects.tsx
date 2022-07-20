@@ -1,4 +1,4 @@
-import { Title, TriangleContainer, MoreProjectsBtn, Container, ProjectsContainer,Proj, ProjPrev,DemoBtn, CodeBtn, ButtonContainer  } from '../../styles/ProjectsStyles'
+import { Title, TriangleContainer, MoreProjectsBtn, Container, ProjectsContainer,Proj, ProjPrev,DemoBtn, CodeBtn, ButtonContainer  } from '../styles/ProjectsStyles'
 import { LetterAnimation2 } from './LetterAnimation'
 
 type projectsData = {

@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react'
-import {CNavbar, MenuBtn, Ul} from '../../styles/NavStyles'
+import {CNavbar, MenuBtn, Ul} from '../styles/NavStyles'
 
 
 export const Navbar: React.FC = () =>{

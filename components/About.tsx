@@ -1,4 +1,4 @@
-import { Title, TriangleContainer, Container, Paragraph, Button } from '../../styles/AboutStyles'
+import { Title, TriangleContainer, Container, Paragraph, Button } from '../styles/AboutStyles'
 
 import { LetterAnimation2 } from './LetterAnimation'
 

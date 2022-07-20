@@ -1,4 +1,4 @@
-import { Title, TriangleContainer, Container, SkillsContainer, Logo } from '../../styles/SkillsStyles'
+import { Title, TriangleContainer, Container, SkillsContainer, Logo } from '../styles/SkillsStyles'
 import Image from 'next/image'
 import { LetterAnimation2 } from './LetterAnimation'
 import {motion } from 'framer-motion'

@@ -1,4 +1,4 @@
-import { Title, TriangleContainer, Container, Form, Input, SubmitBtn, Socials } from '../../styles/ContactStyles'
+import { Title, TriangleContainer, Container, Form, Input, SubmitBtn, Socials } from '../styles/ContactStyles'
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import { LetterAnimation2 } from './LetterAnimation'

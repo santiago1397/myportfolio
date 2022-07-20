@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title } from '../../styles/HeroStyles'
+import { Title } from '../styles/HeroStyles'
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import LetterAnimation from './LetterAnimation'
