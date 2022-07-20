@@ -4,66 +4,96 @@ import { LetterAnimation2 } from './LetterAnimation'
 import {motion } from 'framer-motion'
 
 type logos = {
+    id: number,
     src: string,
     name: string,
+    alt: string,
 }
 
 let techs: logos[] = [
-    {
+    {   
+        id: 1,
         src: '/html.svg',
-        name: 'HTML'
+        name: 'HTML',
+        alt: 'HTML'
     },
     {
+        id: 2,
         src: '/CSS.svg',
-        name: 'CSS'
+        name: 'CSS',
+        alt: 'CSS'
     },
     {
+        id: 3,
         src: '/sass.svg',
-        name: 'SASS'
+        name: 'SASS',
+        alt: 'SASS'
     },
     {
+        id: 4,
         src: '/bootstrap.svg',
-        name: 'Bootstrap'
+        name: 'Bootstrap',
+        alt: 'Bootstrap'
     },
     {
+        id: 5,
         src: '/javascript.svg',
-        name: 'Javascript'
+        name: 'Javascript',
+        alt: 'Javascript'
     },
     {
+        id: 6,
         src: '/typescript.svg',
-        name: 'Typescript'
+        name: 'Typescript',
+        alt: 'Typescript'
     },
     {
+        id: 7,
         src: '/react.svg',
-        name: 'ReactJS'
+        name: 'ReactJS',
+        alt: 'ReactJS'
     },
     {
+        id: 8,
         src: '/nextjs.svg',
-        name: 'NextJS'
+        name: 'NextJS',
+        alt: 'NextJS'
     },
     {
+        id: 9,
         src: '/firebase.svg',
-        name: 'Firebase'
+        name: 'Firebase',
+        alt: 'Firebase'
     },
     {
+        id: 10,
         src: '/php.svg',
-        name: 'PHP'
+        name: 'PHP',
+        alt: 'PHP'
     },
     {
+        id: 11,
         src: '/mysql.svg',
-        name: 'MySQL'
+        name: 'MySQL',
+        alt: 'MySQL'
     },
     {
+        id: 12,
         src: '/git.svg',
-        name: 'GIT'
+        name: 'GIT',
+        alt: 'GIT'
     },
     {
+        id: 13,
         src: '/java.svg',
-        name: 'Java'
+        name: 'Java',
+        alt: 'Java'
     },
     {
+        id: 14,
         src: '/figma.svg',
-        name: 'Figma'
+        name: 'Figma',
+        alt: 'Figma'
     }
 ]
 
@@ -86,9 +116,10 @@ export const Skills: React.FC = () => {
                                 initial={{ opacity: 0, y: 50 }}
                                 transition={{ ease: "easeOut", duration: 0.4 }}
                                 whileInView={{ x: 0, y: 0, rotate: 0, opacity: 1 }}
+                                key={tech.id}
                             >
                                 <Logo >
-                                    <Image src={tech.src} width={'55%'} height={'55%'} />
+                                    <Image src={tech.src} width={'55%'} height={'55%'} alt={tech.alt}/>
                                 </Logo>
                                 {tech.name}
                             </motion.div>
