@@ -34,3 +34,5 @@ export function Parallax({ children, lmao }: { children: React.ReactNode, lmao: 
     )
 
 }
+
+export default Parallax

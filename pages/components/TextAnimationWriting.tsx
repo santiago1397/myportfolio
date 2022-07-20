@@ -51,7 +51,7 @@ export const TextAnimationWriting: React.FC = () => {
 
 
     return () => { clearInterval(ticker) };
-  }, [text, delta])
+  }, [text, delta, loopNum, isDeleting, toRotate])
 
 
 
@@ -61,3 +61,5 @@ export const TextAnimationWriting: React.FC = () => {
 
   )
 }
+
+export default TextAnimationWriting

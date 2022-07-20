@@ -67,6 +67,7 @@ export const LetterAnimation: React.FC<Props> = ({
 
     );
 };
+export default LetterAnimation;
 
 export const LetterAnimation2: React.FC<Props> = ({
     text,

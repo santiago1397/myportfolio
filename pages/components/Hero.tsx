@@ -2,9 +2,9 @@ import React from 'react'
 import { Title } from '../../styles/HeroStyles'
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
-import { LetterAnimation } from './LetterAnimation'
-import { Parallax } from './Parallax'
-import { TextAnimationWriting } from './TextAnimationWriting'
+import LetterAnimation from './LetterAnimation'
+import Parallax from './Parallax'
+import TextAnimationWriting from './TextAnimationWriting'
 
 export const Hero: React.FC = () => {
 
@@ -47,3 +47,5 @@ export const Hero: React.FC = () => {
     )
 
 }
+
+export default Hero
