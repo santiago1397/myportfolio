@@ -15,7 +15,7 @@ export const TriangleContainer = styled.div`
 
     .leftTriangle{
         position: absolute;
-        top: var(--triangle-angle);
+        top: calc(var(--triangle-angle) + 2px);
         height: 0px; 
         width: 50vw; 
         border-top: var(--triangle-angleP) solid transparent;
@@ -26,7 +26,7 @@ export const TriangleContainer = styled.div`
 
     .rightTriangle{
         position: absolute;
-        top: var(--triangle-angle);
+        top: calc(var(--triangle-angle) + 2px);
         left: 50%;
         height: 0px; 
         width: 50vw; 
@@ -40,7 +40,8 @@ export const Container = styled.div`
     margin: 1.2em 1.7em 0 1.2em;
     padding-bottom: 6em;
     h3{
-        font-size: 1.5em;
+        padding 2em 0 1em 0;
+        font-size: 2em;
         font-weight: 500;
         color: white;
     }

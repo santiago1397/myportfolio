@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 export const TriangleContainer = styled.div`
     background-color: #ACACAC;
-
+    z-index: 2;
     .triContainer{
+        z-index: 2;
         --triangle-angle: -20vw;
         --triangle-angleP: 20vw; 
         width: 100%;
@@ -15,7 +16,7 @@ export const TriangleContainer = styled.div`
 
     .leftTriangle{
         position: absolute;
-        top: var(--triangle-angle);
+        top: calc(var(--triangle-angle) + 2px);
         height: 0px; 
         width: 50vw; 
         border-top: var(--triangle-angleP) solid transparent;
@@ -26,7 +27,7 @@ export const TriangleContainer = styled.div`
 
     .rightTriangle{
         position: absolute;
-        top: var(--triangle-angle);
+        top: calc(var(--triangle-angle) + 2px);
         left: 50%;
         height: 0px; 
         width: 50vw; 
@@ -38,9 +39,9 @@ export const TriangleContainer = styled.div`
 `
 export const Container = styled.div`
     margin: 1.2em 1.7em 0 1.7em;
-    padding-bottom: 6em;
+    padding: 6em 0;
     h3{
-        font-size: 1.5em;
+        font-size: 2em;
         font-weight: 500;
     }
 `

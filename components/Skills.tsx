@@ -19,7 +19,7 @@ let techs: logos[] = [
     },
     {
         id: 2,
-        src: '/CSS.svg',
+        src: '/css.svg',
         name: 'CSS',
         alt: 'CSS'
     },

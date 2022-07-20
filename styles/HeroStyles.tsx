@@ -4,8 +4,8 @@ import styled from 'styled-components'
 
 export const Title = styled.div`
     margin: 50px 0 100px 30px;
-    padding-bottom: 50px;
-    
+    padding-bottom: 6em;
+
     p{
         margin: 0;
         font-weight: 300;

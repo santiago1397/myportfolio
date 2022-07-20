@@ -41,10 +41,10 @@ export const Container = styled.div`
     margin: 0em 1.7em 0 1.7em;
     padding-bottom: 6em;
     h3{
-        font-size: 1.5em;
+        margin: 0;
+        padding 2em 0 1em 0;
+        font-size: 2em;
         font-weight: 500;
-        padding-top: 1em;
-        padding-bot: 1em;
         margin: 0;
     }
 `

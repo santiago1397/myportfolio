@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 
 export const TriangleContainer = styled.div`
     background-color: #D9D9D9;
-    z-index: 2;
+    z-index: 1;
     position: relative;
 
     .triContainer{
+        z-index: 1;
         --triangle-angle: -20vw;
         --triangle-angleP: 20vw; 
         width: 100%;
@@ -18,7 +19,7 @@ export const TriangleContainer = styled.div`
 
     .leftTriangle{
         position: absolute;
-        top: var(--triangle-angle);
+        top: calc(var(--triangle-angle) + 2px);
         height: 0px; 
         width: 50vw; 
         border-top: var(--triangle-angleP) solid transparent;
@@ -29,7 +30,7 @@ export const TriangleContainer = styled.div`
 
     .rightTriangle{
         position: absolute;
-        top: var(--triangle-angle);
+        top: calc(var(--triangle-angle) + 2px);
         left: 50%;
         height: 0px; 
         width: 50vw; 
@@ -41,15 +42,20 @@ export const TriangleContainer = styled.div`
 `
 export const Container = styled.div`
     margin: 1.2em 1.7em 0 1.2em;
-    padding-bottom: 6em;
+    padding-bottom: 10em;
+    padding-top: 2em;
     position: relative;
     h3{
-        font-size: 1.5em;
+        margin: 0;
+        padding 2em 0 1em 0;
+        font-size: 2em;
         font-weight: 500;
     }
     z-index: 2;
 `
 export const Title = styled.h3`
+    margin: 0;
+    padding 2em 0;
     font-size: 1.5em;
     font-weight: 500;
 `
