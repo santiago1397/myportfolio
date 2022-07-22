@@ -1,4 +1,8 @@
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
+
+const media = {
+    medium: '@media(min-width: 800px)',
+}
 
 type props = {
     active?: boolean,
@@ -18,12 +22,21 @@ export const CNavbar = styled.nav<props>`
     backdrop-filter: ${(props) => (props.active ? "blur(0px)" : props.mask? "blur(8px)" : "blur(0px)")};
     border-radius: 15px;
     text-align: center;
-    
+    ${media.medium}{
+        visibility: hidden;
+        left: 20vw;
+        width: 60vw;
+        height: 54px;
+        top: 2px;
+    }
 `;
 
 export const MenuBtn = styled.div<props>`
     padding: 10px;
-    
+    ${media.medium}{
+        display: none !important; 
+        visibility: hidden;
+    }
 `
 
 export const Ul = styled.ul<props>`
@@ -34,4 +47,20 @@ export const Ul = styled.ul<props>`
     li{
         padding: 10px; 
     }
+
+    ${media.medium}{
+        
+        color: black;
+        z-index: 10;
+        position: absolute;
+        visibility: visible;
+        display: flex;
+        left: 0;
+        width: 100%;
+        justify-content: space-between;
+        li{
+            padding: 5px; 
+        }
+    }
+
 `

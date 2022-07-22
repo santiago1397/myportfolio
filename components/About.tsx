@@ -18,6 +18,7 @@ export const About: React.FC = () => {
                     initial={{ opacity: 0, y: 50 }}
                     transition={{ ease: "easeOut", duration: 0.4 }}
                     whileInView={{ x: 0, y: 0, rotate: 0, opacity: 1 }}
+                    viewport={{ once: true }}
                 >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation

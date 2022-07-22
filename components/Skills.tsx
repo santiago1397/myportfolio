@@ -1,7 +1,7 @@
-import { Title, TriangleContainer, Container, SkillsContainer, Logo } from '../styles/SkillsStyles'
+import { Title, TriangleContainer, Container, SkillsContainer, Logo, Skill } from '../styles/SkillsStyles'
 import Image from 'next/image'
 import { LetterAnimation2 } from './LetterAnimation'
-import {motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 type logos = {
     id: number,
@@ -112,17 +112,18 @@ export const Skills: React.FC = () => {
                 <SkillsContainer>
                     {techs.map((tech) => {
                         return (
-                            <motion.div style={{display: 'flex', alignItems: 'center', flexDirection: 'column', marginTop: '20px'}}
+                            <Skill 
                                 initial={{ opacity: 0, y: 50 }}
                                 transition={{ ease: "easeOut", duration: 0.4 }}
                                 whileInView={{ x: 0, y: 0, rotate: 0, opacity: 1 }}
+                                viewport={{ once: true }}
                                 key={tech.id}
                             >
                                 <Logo >
-                                    <Image src={tech.src} width={'55%'} height={'55%'} alt={tech.alt}/>
+                                    <Image src={tech.src} width='80%' height='80%' alt={tech.alt}/>
                                 </Logo>
-                                {tech.name}
-                            </motion.div>
+                                <p>{tech.name}</p>
+                            </Skill>
                         )
                     })}
 

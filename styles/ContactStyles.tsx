@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+const media = {
+    small: '@media(min-width: 600px)',
+    medium: '@media(min-width: 900px)',
+    large: '@media(min-width: 1200px)'
+}
 
 export const TriangleContainer = styled.div`
     background-color: #000;
@@ -46,6 +51,24 @@ export const Container = styled.div`
         font-weight: 500;
         color: white;
     }
+
+    ${media.small}{
+        margin: 0em 3em 0 3em;
+        h3{
+            font-size: 2.8em;
+        }
+        padding-bottom: 10em;
+    }
+    ${media.medium}{
+        margin: 0 8em 0 8em;
+    }
+    ${media.large}{
+        padding-bottom: 18em;
+        margin: 0em 12em 0 12em;
+        h3{
+            font-size: 3.5em;
+        }
+    }
 `
 export const Title = styled.h3`
     font-weight: 500;
@@ -57,6 +80,7 @@ export const Paragraph = styled.p`
 `
 
 export const Form = styled.form`
+    margin-top: 1.4em;
     textarea{
         color:white;
         margin-bottom: 1.6em;
@@ -64,6 +88,7 @@ export const Form = styled.form`
         background: transparent;
         border: solid 1px white;
         padding: 8px;
+        font-size: 1.2em;
 
         :focus{
             outline: none;
@@ -71,7 +96,7 @@ export const Form = styled.form`
         }
 
         ::placeholder{
-            font-size: 1.1em;
+            font-size: 1.2em;
             font-family: Kanit;
             font-weight: 300;
             color:white;
@@ -83,8 +108,9 @@ export const Input = styled.input`
     border-radius: 10px;
     background: transparent;
     border: solid 1px white;
-    padding: 8px;
+    padding: 10px;
     color:white;
+    font-size: 1.2em;
 
     :focus{
         outline: none;
@@ -92,7 +118,7 @@ export const Input = styled.input`
     }
 
     ::placeholder{
-        font-size: 1.1em;
+        font-size: 1.2em;
         font-family: Kanit;
         font-weight: 300;
         color:white;
@@ -100,11 +126,11 @@ export const Input = styled.input`
 `
 
 export const SubmitBtn = styled.button`
-    backgroun-color: #D9D9D9;
+    background-color: #D9D9D9;
     border-style: none;
     padding: 5px 10px;
     border-radius: 10px;
-    font-size: 1em;
+    font-size: 1.3em;
 `
 
 export const Socials = styled.div`
@@ -118,5 +144,13 @@ export const Socials = styled.div`
         display: flex;
         width: 50%;
         justify-content: space-between;
+    }
+
+    a{
+        width: 6vw;
+        height: 6vw;
+
+        max-width: 3.3em;
+        max-heidht: 3.3em;
     }
 `

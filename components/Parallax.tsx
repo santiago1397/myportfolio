@@ -26,7 +26,7 @@ export function Parallax({ children, lmao }: { children: React.ReactNode, lmao: 
 
     return ( 
 
-        <div ref={train.ref} style={{zIndex: '1', position: 'relative'}}>
+        <div ref={train.ref} style={{zIndex: '1', position: 'relative', margin: '0'}}>
             {children}
         </div>
         

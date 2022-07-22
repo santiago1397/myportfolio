@@ -55,7 +55,7 @@ export const LetterAnimation: React.FC<Props> = ({
             variants={container}
             initial="hidden"
             whileInView="visible"
-
+            viewport={{ once: true }}
             {...props}
         >
             {letters.map((letter, index) => (
@@ -117,6 +117,7 @@ export const LetterAnimation2: React.FC<Props> = ({
             variants={container}
             initial="hidden"
             whileInView="visible"
+            
 
             {...props}
         >

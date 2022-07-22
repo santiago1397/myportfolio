@@ -1,4 +1,4 @@
-import { Title, TriangleContainer, MoreProjectsBtn, Container, ProjectsContainer,Proj, ProjPrev,DemoBtn, CodeBtn, ButtonContainer  } from '../styles/ProjectsStyles'
+import { Title,Description,ProjectTitle, TriangleContainer, MoreProjectsBtn, Container, ProjectsContainer,Proj, TitleDescriptionContainer, ProjPrev,DemoBtn, CodeBtn, ButtonContainer  } from '../styles/ProjectsStyles'
 import { LetterAnimation2 } from './LetterAnimation'
 
 type projectsData = {
@@ -32,7 +32,15 @@ export const Projects: React.FC = () => {
                     {projects.map((project) =>{
                         return(
                             <Proj key={project.id}>
-                                <h4 style={{fontWeight: '300', fontSize: '1.5em', marginTop: '1em', marginBottom: '1em'}}>{project.name}</h4>
+                                <TitleDescriptionContainer>
+                                    <ProjectTitle>{project.name}</ProjectTitle>
+                                    <Description>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </Description>
+                                </TitleDescriptionContainer>
                                 <ProjPrev
                                     initial={{ opacity: 0, y: 100 }}
                                     transition={{ ease: "easeOut", duration: 0.4 }}

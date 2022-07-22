@@ -52,16 +52,16 @@ export const Contact: React.FC = () => {
                 <div>
 
                     <a href="https://github.com/santiago1397" target="_blank" rel="noopener noreferrer">
-                        <AiFillGithub size="22px" />
+                        <AiFillGithub size="100%" />
                     </a>
                     <a href='https://www.linkedin.com/in/santiago-villahermosa-9239139b/' target="_blank" rel="noopener noreferrer">
-                        <AiFillLinkedin size="22px" />
+                        <AiFillLinkedin size="100%" />
                     </a>
                     <a href='https://twitter.com/santiago1397' target="_blank" rel="noopener noreferrer">
-                        <AiOutlineTwitter size="22px" />
+                        <AiOutlineTwitter size="100%" />
                     </a>
                     <a href='https://api.whatsapp.com/send?phone=584126080560' target="_blank" rel="noopener noreferrer">
-                        <IoLogoWhatsapp size="22px" />
+                        <IoLogoWhatsapp size="100%" />
                     </a>
                 </div>
             </Socials>

@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 import { motion } from "framer-motion";
 
+const media = {
+    small: '@media(min-width: 600px)',
+    medium: '@media(min-width: 900px)',
+    large: '@media(min-width: 1200px)'
+}
 
 export const TriangleContainer = styled.div`
     background-color: #D9D9D9;
@@ -52,15 +57,37 @@ export const Container = styled.div`
         font-weight: 500;
     }
     z-index: 2;
+    ${media.small}{
+        margin: 1.2em 3em 0 3em;
+        h3{
+            font-size: 2.8em;
+        }
+    }
+    ${media.medium}{
+        margin: 1.2em 8em 0 8em;
+        padding-bottom: 15em;
+    }
+    ${media.large}{
+        padding-bottom: 18em;
+        margin: 1.2em 12em 0 12em;
+        h3{
+            font-size: 3.5em;
+        }
+    }
 `
 export const Title = styled.h3`
     margin: 0;
     padding 2em 0;
     font-size: 1.5em;
     font-weight: 500;
+
 `
 export const Paragraph = styled(motion.p)`
     text-align: justify;
+    ${media.medium}{
+        font-size: 1.2em;
+        font-weight: 300;
+    }
 `
 export const Button = styled.button`
     margin: auto;
@@ -72,6 +99,18 @@ export const Button = styled.button`
     padding: 6px 10px;
     font-family: Kanit;
     font-weight: 300;
+
+    ${media.small}{
+        margin-top: 20px;
+    }
+
+    ${media.medium}{
+        margin-top: 40px;
+    }
+
+    ${media.large}{
+        margin-top: 80px;
+    }
     
 `
 

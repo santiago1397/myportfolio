@@ -1,5 +1,11 @@
 import styled from 'styled-components'
+import {motion} from 'framer-motion'
 
+const media = {
+    small: '@media(min-width: 600px)',
+    medium: '@media(min-width: 900px)',
+    large: '@media(min-width: 1200px)'
+}
 
 export const TriangleContainer = styled.div`
     background-color: #ACACAC;
@@ -44,11 +50,51 @@ export const Container = styled.div`
         font-size: 2em;
         font-weight: 500;
     }
+    ${media.small}{
+        margin: 1.2em 3em 0 3em;
+        h3{
+            font-size: 2.8em;
+        }
+        padding-bottom: 10em;
+    }
+    ${media.medium}{
+        margin: 1.2em 8em 0 8em;
+    }
+    ${media.large}{
+        padding-bottom: 18em;
+        margin: 1.2em 12em 0 12em;
+        h3{
+            font-size: 3.5em;
+        }
+    }
 `
 export const Title = styled.h3`
     font-weight: 500;
     font-size: 1.5em;
 `
+
+export const Skill = styled(motion.div)`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    height: 25vw;
+    width: 25vw;
+    p{
+        margin: 5px 0 0 0;
+        font-size: 1.3em;
+    }
+    ${media.small}{
+        height: 22vw;
+        width: 22vw;
+    }
+
+    ${media.medium}{
+        height: 150px;
+        width: 150px
+    }
+`
+
 export const SkillsContainer = styled.div`
     display: flex;
     justify-content: space-between;
@@ -58,11 +104,21 @@ export const SkillsContainer = styled.div`
 export const Logo = styled.div`
     background-color: white;
     border-radius: 20px;
-    width: 80px;
-    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 80%;
+    width: 80%;
+
+    ${media.small}{
+        height: 80%;
+        width: 80%;
+    }
+
+    ${media.medium}{
+        height: 120px;
+        width: 120px;
+    }
 
 `
 
