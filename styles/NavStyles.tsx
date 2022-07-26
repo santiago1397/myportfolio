@@ -6,7 +6,9 @@ const media = {
 
 type props = {
     active?: boolean,
-    mask?: boolean
+    mask?: boolean,
+    view?: boolean,
+    contact?: boolean,
 }
 
 export const CNavbar = styled.nav<props>`
@@ -16,7 +18,7 @@ export const CNavbar = styled.nav<props>`
     top: 20px;
     left: calc(100vw - 110px);
     transition: height 0.6s ease;
-    background: ${(props) => (props.active ? "black" : props.mask? "rgba(255, 255, 255, 0.2)" : "transparent")};
+    background: ${(props) => (props.active ? "var(--primary-color)" : props.mask? "rgba(255, 255, 255, 0.2)" : "transparent")};
     color: ${(props) => (props.active ? "white" : "black")};
     height: ${(props) => (props.active ? "300px" : "42px")};
     backdrop-filter: ${(props) => (props.active ? "blur(0px)" : props.mask? "blur(8px)" : "blur(0px)")};
@@ -44,13 +46,14 @@ export const Ul = styled.ul<props>`
     margin: 0;
     list-style-type: none;
     border-radius: 30px;
+    
     li{
         padding: 10px; 
     }
 
     ${media.medium}{
-        
-        color: black;
+        transition: 0.5s ease;
+        color: ${(props) => (props.contact ? "white" : "black")};
         z-index: 10;
         position: absolute;
         visibility: visible;
@@ -58,8 +61,27 @@ export const Ul = styled.ul<props>`
         left: 0;
         width: 100%;
         justify-content: space-between;
+
         li{
             padding: 5px; 
+            position: relative;
+        }
+
+        li:after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        li:hover::after{
+            transform: scaleX(1);
+            transform-origin: bottom left;
         }
     }
 

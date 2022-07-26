@@ -27,6 +27,7 @@ export const Title = styled.div`
     }
 
     h2:after{
+        color: var(--primary-color);
         content: '|';
         animation: blink 1s step-start infinite;
     }
@@ -79,11 +80,15 @@ export const Socials = styled.div`
     width: 40%; 
     display: flex; 
     justify-content: space-between;
+    
     a{
+        transition: .5s ease;
         height: 30px;
         width: 30px;
         
     }
+
+    
     ${media.small}{
         a{
             display: flex;
@@ -94,6 +99,11 @@ export const Socials = styled.div`
             border: solid 1px black;
             border-radius: 50%;
             padding: 10px;
+        }
+
+        a:hover{
+            color: var(--primary-color);
+            border-color: var(--primary-color);
         }
         
     }

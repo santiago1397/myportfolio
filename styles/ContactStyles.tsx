@@ -89,6 +89,8 @@ export const Form = styled.form`
         border: solid 1px white;
         padding: 8px;
         font-size: 1.2em;
+        font-family: Kanit;
+        font-weight: 300;
 
         :focus{
             outline: none;
@@ -126,11 +128,54 @@ export const Input = styled.input`
 `
 
 export const SubmitBtn = styled.button`
-    background-color: #D9D9D9;
+    background-color: var(--primary-color);
     border-style: none;
     padding: 5px 10px;
     border-radius: 10px;
     font-size: 1.3em;
+    cursor: pointer;
+    display: flex;
+`
+
+export const SendIcon = styled.div`
+    margin-left: 10px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    height: 23px;
+    width: 23px;
+`
+export const LoadingAnimation = styled.div`
+
+    display: flex;
+    transform: translateZ(1px);
+
+    & > div {
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+        margin: 4px;
+        border-radius: 50%;
+        background: #000;
+        animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
+
+    @keyframes lds-circle {
+        0%, 100% {
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+        }
+        0% {
+        transform: rotateY(0deg);
+        }
+        50% {
+        transform: rotateY(1800deg);
+        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+        }
+        100% {
+        transform: rotateY(3600deg);
+        }
+    }
+
 `
 
 export const Socials = styled.div`
@@ -147,10 +192,17 @@ export const Socials = styled.div`
     }
 
     a{
+        transition: .5s ease;
+
         width: 6vw;
         height: 6vw;
 
-        max-width: 3.3em;
-        max-heidht: 3.3em;
+        max-width: 3em;
+        max-heidht: 3em;
     }
+    a:hover{
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
 `

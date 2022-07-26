@@ -20,10 +20,7 @@ export const About: React.FC = () => {
                     whileInView={{ x: 0, y: 0, rotate: 0, opacity: 1 }}
                     viewport={{ once: true }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    I am a programmer who loves using new technologies to create cool, creative and fun stuff, I’m constantly searching, learning and experimenting with new features in the industry to create optimal and digital solutions. I also like creative websites and to watch inspiring things and ideas. Sometimes as a hobby I play videogames.
                 </Paragraph>
 
                 <div style={{textAlign: "center", marginTop: "20px"}}>

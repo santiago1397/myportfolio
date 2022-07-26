@@ -72,6 +72,20 @@ export const Title = styled.h3`
     font-weight: 500;
     font-size: 1.5em;
 `
+export const SkillsContainer = styled.div`
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 25vw);
+    justify-content: space-between;
+
+    ${media.small}{
+        grid-template-columns: repeat(auto-fill, 22vw);
+    }
+
+    ${media.medium}{
+        grid-template-columns: repeat(auto-fill, 150px);
+    }
+`
 
 export const Skill = styled(motion.div)`
     display: flex;
@@ -79,26 +93,19 @@ export const Skill = styled(motion.div)`
     flex-direction: column;
     margin-top: 20px;
     height: 25vw;
-    width: 25vw;
+
     p{
         margin: 5px 0 0 0;
         font-size: 1.3em;
     }
     ${media.small}{
         height: 22vw;
-        width: 22vw;
     }
 
     ${media.medium}{
         height: 150px;
-        width: 150px
+        width: 150px;
     }
-`
-
-export const SkillsContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
 `
 
 export const Logo = styled.div`

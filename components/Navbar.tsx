@@ -5,12 +5,19 @@ import {CNavbar, MenuBtn, Ul} from '../styles/NavStyles'
 export const Navbar: React.FC = () =>{
     const [menu, setMenu] = useState<boolean>(false)
     const [menuMask, setMenuMask] = useState<boolean>(false)
+    const [contact, setContact] = useState<boolean>(false)
 
     const handleScroll = () => {
         if(window.scrollY>= 90){
             setMenuMask(true)
         }else{
             setMenuMask(false)
+        }
+
+        if(window.scrollY>= 3500){
+            setContact(true)
+        }else{
+            setContact(false)
         }
     };
 
@@ -21,9 +28,9 @@ export const Navbar: React.FC = () =>{
     }, []);
 
     return ( 
-        <CNavbar active={menu} mask={menuMask}>
+        <CNavbar active={menu} mask={menuMask}  >
             <MenuBtn mask={menuMask} onClick={() =>{setMenu(menu=>!menu); }}>Menu</MenuBtn>
-            <Ul active={menu}>
+            <Ul active={menu} contact={contact}>
                 <li><a href="#Home">home</a></li>
                 <li><a href="#About">about</a></li>
                 <li><a href="#Skills">skills</a></li>

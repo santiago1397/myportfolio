@@ -1,24 +1,35 @@
-import { Title, TriangleContainer, Container, Form, Input, SubmitBtn, Socials } from '../styles/ContactStyles'
+import { SendIcon, TriangleContainer, Container, Form, Input, SubmitBtn, Socials, LoadingAnimation } from '../styles/ContactStyles'
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from 'react-icons/ai'
-import { IoLogoWhatsapp } from 'react-icons/io'
+import { IoLogoWhatsapp,  } from 'react-icons/io'
 import { LetterAnimation2 } from './LetterAnimation'
 import emailjs from 'emailjs-com'
-import { FormEvent, useRef } from 'react'
+import { FormEvent, useRef, useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {MdSend} from 'react-icons/md'
+
+
 
 export const Contact: React.FC = () => {
     const form = useRef<HTMLFormElement>(null)
+    const [loading, setLoading] = useState<boolean>(false)
 
-    const sendEmail = (e : FormEvent) => {
+    const sendEmail = async (e : FormEvent) => {
         e.preventDefault();
+        setLoading(true)
 
-        emailjs.sendForm('service_xzweopu', 'template_iupg0g8', form.current! , 'KOXbxCzdMte-fWEMn')
+        await emailjs.sendForm('service_xzweopu', 'template_iupg0g8', form.current! , 'KOXbxCzdMte-fWEMn')
             .then((result) => {
+                toast.success('Thanks for sending a message!', {
+                    position: toast.POSITION.TOP_RIGHT
+                });
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
             });
 
         form.current!.reset()
+        setLoading(false)
     };
 
 
@@ -29,7 +40,7 @@ export const Contact: React.FC = () => {
                 <div className="rightTriangle"></div>
             </div>
             <Container id="Contact">
-
+            <ToastContainer />
                 <LetterAnimation2 text="Contact me" />
 
                 <Form ref={form} onSubmit={sendEmail}>
@@ -39,10 +50,10 @@ export const Contact: React.FC = () => {
 
                         <Input type="email" name="email" id="name" autoComplete="off" placeholder='Email' required />
 
-                        <textarea rows={6} name="message" placeholder="Message"></textarea>
+                        <textarea  rows={6} name="message" placeholder="Message"></textarea>
 
                         <div>
-                            <SubmitBtn type="submit">Send</SubmitBtn>
+                            <SubmitBtn type="submit">Send <SendIcon>{loading? <LoadingAnimation><div></div></LoadingAnimation>:<MdSend width='100%' height='100%'/>}</SendIcon></SubmitBtn>
                         </div>
                     </div>
                 </Form>

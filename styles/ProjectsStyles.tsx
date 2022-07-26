@@ -1,11 +1,15 @@
 import styled from 'styled-components'
-import {motion } from 'framer-motion'
+import {motion, HTMLMotionProps } from 'framer-motion'
 
 const media = {
     small: '@media(min-width: 600px)',
     medium: '@media(min-width: 900px)',
     large: '@media(min-width: 1200px)'
 }
+
+interface Props extends HTMLMotionProps<"div"> {
+    src?: string;
+  }
 
 export const TriangleContainer = styled.div`
     background-color: #ACACAC;
@@ -129,11 +133,12 @@ export const ProjectTitle = styled.h4`
 
 `
 
-export const ProjPrev = styled(motion.div)`
-    background-color: #D9D9D9;
+export const ProjPrev = styled(motion<Props>("div"))`
+    overflow: hidden;
     border-radius: 15px;
     height: 20em;
     width: 100%;
+    z-index: 1;
     position: relative;
 
     ${media.medium}{
@@ -149,7 +154,7 @@ export const ButtonContainer = styled.div`
     width: 100%;
 `
 
-export const CodeBtn = styled.button`
+export const CodeBtn = styled.a`
     background-color: #797979;
     color: white;
     font-size: 1em;
@@ -157,10 +162,14 @@ export const CodeBtn = styled.button`
     padding: 10px 15px;
     border-style: none;
     margin-right: 15px;
+    cursor: pointer;
 `
 
-export const DemoBtn = styled.button`
-    background-color: #797979;
+export const DemoBtn = styled.a`
+    cursor: pointer;
+    display: flex;
+    align-items:center;
+    background-color: var(--primary-color);
     color: white;
     font-size: 1em;
     border-radius: 10px;
@@ -176,9 +185,39 @@ export const MoreProjectsBtn = styled.button`
     background-color: #000;
     color: white;
     border-style: none;
-    padding: 3px 15px;
+    padding: 6px 10px;
     font-family: Kanit;
     font-weight: 300;
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        width: 0;
+        height: 400%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background-color: var(--primary-color);
+        transition: .5s ease;
+        display: block;
+        z-index: -1;
+    }
+    
+    &:hover::before {
+        width: 105%;       
+    }
+
+    &:hover {
+        color: black;
+    }
+
+    
+
+
 
     ${media.small}{
         padding: 8px 16px;
@@ -186,7 +225,7 @@ export const MoreProjectsBtn = styled.button`
     }
 
     ${media.medium}{
-        padding: 10px 20px;
-        font-size: 1.2em;
+        padding: 6px 10px;
+        font-size: 1em;
     }
 `

@@ -90,8 +90,10 @@ export const Paragraph = styled(motion.p)`
     }
 `
 export const Button = styled.button`
+    z-index: 1;
     margin: auto;
     font-size: 1em;
+    overflow: hidden;
     background-color: #000;
     color: white;
     border: none;
@@ -99,6 +101,32 @@ export const Button = styled.button`
     padding: 6px 10px;
     font-family: Kanit;
     font-weight: 300;
+    cursor: pointer;
+    position: relative;
+    
+    &::before {
+        content: '';
+        width: 0;
+        height: 400%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background-color: var(--primary-color);
+        transition: .5s ease;
+        display: block;
+        z-index: -1;
+    }
+    
+    &:hover::before {
+        width: 105%;       
+    }
+
+    &:hover {
+        color: black;
+    }
+
+    
 
     ${media.small}{
         margin-top: 20px;

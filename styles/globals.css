@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #dcb49e;
+}
+
 html,
 body {
   padding: 0;
@@ -5,9 +9,22 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body{
   height: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
 }
 
 a {
