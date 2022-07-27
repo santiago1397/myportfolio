@@ -24,8 +24,9 @@ export const About: React.FC = () => {
                 </Paragraph>
 
                 <div style={{textAlign: "center", marginTop: "20px"}}>
-                    <Button>
-                        Download Resume
+                    
+                    <Button >
+                        <a href="./Santiago Villahermosa CV.pdf" download="Santiago Villahermosa CV">Download Resume</a>
                     </Button>
                 </div>
             </Container>
