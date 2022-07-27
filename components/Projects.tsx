@@ -75,7 +75,9 @@ export const Projects: React.FC = () => {
                 
                 <div style={{display: 'flex', }}>
                     <MoreProjectsBtn>
-                        More Projects
+                        <a href='https://github.com/santiago1397?tab=repositories' target="_blank" rel="noopener noreferrer">
+                            More Projects
+                        </a>
                     </MoreProjectsBtn>
                 </div>
             </Container>
