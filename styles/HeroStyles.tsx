@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const media = {
+    extraSmall:'@media(min-width: 400px)',
     small: '@media(min-width: 600px)',
     medium: '@media(min-width: 800px)',
     large: '@media(min-width: 1200px)',
@@ -18,7 +19,7 @@ export const Title = styled.div`
     }
 
     h1{
-        font-size: 3.2em;
+        font-size: 2.1em;
         margin: 0;
         font-weight: 900;
     }
@@ -43,7 +44,13 @@ export const Title = styled.div`
             opacity: 0;
         }
     }
-    
+
+    ${media.extraSmall}{
+        h1{
+            font-size: 2.8em;
+        }
+    }
+
     ${media.small}{
         margin: 0em 3em 15vw 3em;
         h1{
