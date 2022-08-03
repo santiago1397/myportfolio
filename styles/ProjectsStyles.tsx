@@ -4,7 +4,8 @@ import {motion, HTMLMotionProps } from 'framer-motion'
 const media = {
     small: '@media(min-width: 600px)',
     medium: '@media(min-width: 900px)',
-    large: '@media(min-width: 1200px)'
+    large: '@media(min-width: 1200px)',
+    extraLarge: '@media(min-width: 1400px)'
 }
 
 interface Props extends HTMLMotionProps<"div"> {
@@ -50,6 +51,7 @@ export const TriangleContainer = styled.div`
 export const Container = styled.div`
     margin: 0 1.7em 0 1.7em;
     padding-bottom: 6em;
+    max-width: 1200px;
 
     h3{
         margin: 0;
@@ -75,6 +77,11 @@ export const Container = styled.div`
         h3{
             font-size: 3.5em;
         }
+
+    }
+    ${media.extraLarge}{
+        margin-left: auto;
+        margin-right: auto;
     }
 `
 
@@ -94,7 +101,7 @@ export const Proj = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-bottom: 80px;
 
     ${media.medium}{
         flex-direction: row;
@@ -111,6 +118,8 @@ export const TitleDescriptionContainer = styled.div`
 `
 export const Description = styled.div`
     display: none;
+    font-family: 'Noto Serif', serif;
+    text-align: justify;
     ${media.medium}{
         display: block;
         font-size: 1.1em;
@@ -185,13 +194,21 @@ export const MoreProjectsBtn = styled.button`
     background-color: #000;
     color: white;
     border-style: none;
-    padding: 6px 10px;
     font-family: Kanit;
     font-weight: 300;
     z-index: 1;
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    padding: 0;
+
+    padding: 10px 0px;
+
+    a{
+        width: 100%;
+        height: 100%;
+        padding: 10px 15px;
+    }
 
     &::before {
         content: '';
@@ -220,12 +237,33 @@ export const MoreProjectsBtn = styled.button`
 
 
     ${media.small}{
-        padding: 8px 16px;
+        a{
+            width: 100%;
+            height: 100%;
+        }
         font-size: 1.1em;
     }
 
     ${media.medium}{
-        padding: 6px 10px;
-        font-size: 1em;
+        a{
+            width: 100%;
+            height: 100%;
+
+        }
+        font-size: 1.3em;
     }
+`
+
+export const TechContainer = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    margin-top:auto;
+`
+
+export const Tech = styled.div`
+    border-radius: 10px;
+    padding: 2px 5px;
+    color: black;
+    margin-right: 5px;
+    border: 1px solid black;
 `

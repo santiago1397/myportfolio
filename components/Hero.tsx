@@ -1,5 +1,6 @@
 import React from 'react'
-import { Title, Socials } from '../styles/HeroStyles'
+import Image from 'next/image'
+import { Title, Socials, ImgContainer } from '../styles/HeroStyles'
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import LetterAnimation from './LetterAnimation'
@@ -15,7 +16,10 @@ export const Hero: React.FC = () => {
             <Parallax lmao='-2'>
 
                 <Title >
-                    <div>
+                    <ImgContainer>
+                        <Image src='/teemo.png' alt='test' width={835} height={778} layout="responsive" />
+                    </ImgContainer>
+                    <div className='container'>
 
                         <p>Hi there, my name is</p>
 
@@ -28,7 +32,7 @@ export const Hero: React.FC = () => {
                         </div>
                     </div>
 
-                    <div >
+                    <div className='container'>
                         <Socials >
                             <a href="https://github.com/santiago1397" target="_blank" rel="noopener noreferrer">
                                 <AiFillGithub size="100%" />

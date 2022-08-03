@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const media = {
     medium: '@media(min-width: 800px)',
+    large: '@media(min-width: 1400px)'
 }
 
 type props = {
@@ -30,6 +31,10 @@ export const CNavbar = styled.nav<props>`
         width: 60vw;
         height: 54px;
         top: 2px;
+    }
+    ${media.large}{
+        left: 35vw;
+        width: 30vw;
     }
 `;
 

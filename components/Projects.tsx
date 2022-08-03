@@ -1,4 +1,4 @@
-import { Title,Description,ProjectTitle, TriangleContainer, MoreProjectsBtn, Container, ProjectsContainer,Proj, TitleDescriptionContainer, ProjPrev,DemoBtn, CodeBtn, ButtonContainer  } from '../styles/ProjectsStyles'
+import { Tech,TechContainer,Description,ProjectTitle, TriangleContainer, MoreProjectsBtn, Container, ProjectsContainer,Proj, TitleDescriptionContainer, ProjPrev,DemoBtn, CodeBtn, ButtonContainer  } from '../styles/ProjectsStyles'
 import { LetterAnimation2 } from './LetterAnimation'
 import {BiRightArrow} from 'react-icons/bi'
 import Image from 'next/image'
@@ -9,6 +9,7 @@ type projectsData = {
     code: string,
     demo: string,
     name: string,
+    tech: string[],
     description: string,
 }
 
@@ -19,6 +20,7 @@ let projects: projectsData[] = [
         code: 'https://github.com/santiago1397/React-Project-RNI',
         demo: 'https://santiago1397.github.io/React-Project-RNI',
         name: 'Web Database Manager',
+        tech: ["react.js","javascript","firebase", "html","css"],
         description: 'This project was made with the goal of creating a web app wich could register innovators or especific users and information about their projects so we can have a register with graphics and statistics, some others features about this project are: registers multiple users or innovators with and excel sheet, download the current information to an excel sheet and specific searchbar or filter.'
     },
     {
@@ -27,6 +29,7 @@ let projects: projectsData[] = [
         code: 'https://github.com/santiago1397/myportfolio',
         demo: 'myportfolio-santiago1397.vercel.app',
         name: 'Porfolio',
+        tech: ["next.js","typescript", "html","css"],
         description: "Simple portfolio made to show my skills and projects ",
     }
 ]
@@ -48,6 +51,13 @@ export const Projects: React.FC = () => {
                                     <Description>
                                         {project.description}
                                     </Description>
+                                    <TechContainer>
+                                        {project.tech.map((tec)=>{
+                                            return(
+                                                <Tech>{tec}</Tech>
+                                            )
+                                        })}
+                                    </TechContainer>
                                 </TitleDescriptionContainer>
                                 <ProjPrev
                                     initial={{ opacity: 0, y: 100 }}

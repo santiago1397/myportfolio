@@ -1,8 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
-
-
-
 
 
 export const TextAnimationWriting: React.FC = () => {
@@ -12,7 +8,7 @@ export const TextAnimationWriting: React.FC = () => {
   const [text, setText] = useState<string>('');
   const [delta, setDelta] = useState<number>(300 - Math.random() * 100);
   const [index, setIndex] = useState<number>(1);
-  const toRotate: string[] = ["Web Developer", "Software Engineer Student", "Enthusiastic Dev"];
+  const toRotate: string[] = ["Web Developer 💻", "Software Engineer Student", "Enthusiastic Dev 🧐"];
   const period: number = 1200;
 
   useEffect(() => {

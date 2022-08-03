@@ -4,7 +4,8 @@ import {motion} from 'framer-motion'
 const media = {
     small: '@media(min-width: 600px)',
     medium: '@media(min-width: 900px)',
-    large: '@media(min-width: 1200px)'
+    large: '@media(min-width: 1200px)',
+    extraLarge: '@media(min-width: 1400px)'
 }
 
 export const TriangleContainer = styled.div`
@@ -46,10 +47,12 @@ export const TriangleContainer = styled.div`
 export const Container = styled.div`
     margin: 0 1.7em 0 1.7em;
     padding: 6em 0;
+    max-width: 1200px;
     h3{
         font-size: 2em;
         font-weight: 500;
     }
+
     ${media.small}{
         margin: 1.2em 3em 0 3em;
         h3{
@@ -66,6 +69,11 @@ export const Container = styled.div`
         h3{
             font-size: 3.5em;
         }
+        
+    }
+    ${media.extraLarge}{
+        margin-left: auto;
+        margin-right: auto;
     }
 `
 export const Title = styled.h3`
@@ -77,6 +85,7 @@ export const SkillsContainer = styled.div`
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, 25vw);
     justify-content: space-between;
+    
 
     ${media.small}{
         grid-template-columns: repeat(auto-fill, 22vw);
@@ -93,6 +102,10 @@ export const Skill = styled(motion.div)`
     flex-direction: column;
     margin-top: 20px;
     height: 25vw;
+    border: 2px solid #ACACAC;
+    border-radius: 15px;
+
+
 
     p{
         margin: 5px 0 0 0;
@@ -114,6 +127,7 @@ export const Logo = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top:10px;
     height: 80%;
     width: 80%;
 
@@ -128,4 +142,6 @@ export const Logo = styled.div`
     }
 
 `
+
+
 

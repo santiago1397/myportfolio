@@ -3,7 +3,8 @@ import styled from 'styled-components'
 const media = {
     small: '@media(min-width: 600px)',
     medium: '@media(min-width: 900px)',
-    large: '@media(min-width: 1200px)'
+    large: '@media(min-width: 1200px)',
+    extraLarge: '@media(min-width: 1400px)'
 }
 
 export const TriangleContainer = styled.div`
@@ -44,6 +45,7 @@ export const TriangleContainer = styled.div`
 export const Container = styled.div`
     margin: 0 1.7em 0 1.2em;
     padding-bottom: 6em;
+    max-width: 1200px;
     h3{
         margin: 0;
         padding 2em 0 1em 0;
@@ -68,6 +70,10 @@ export const Container = styled.div`
         h3{
             font-size: 3.5em;
         }
+    }
+    ${media.extraLarge}{
+        margin-left: auto;
+        margin-right: auto;
     }
 `
 export const Title = styled.h3`

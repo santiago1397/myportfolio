@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 const media = {
     small: '@media(min-width: 600px)',
     medium: '@media(min-width: 900px)',
-    large: '@media(min-width: 1200px)'
+    large: '@media(min-width: 1200px)',
+    extraLarge: '@media(min-width: 1400px)'
 }
 
 export const TriangleContainer = styled.div`
@@ -50,6 +51,7 @@ export const Container = styled.div`
     padding-bottom: 10em;
     padding-top: 2em;
     position: relative;
+    max-width: 1200px;
     h3{
         margin: 0;
         padding 2em 0 1em 0;
@@ -74,6 +76,10 @@ export const Container = styled.div`
             font-size: 3.5em;
         }
     }
+    ${media.extraLarge}{
+        margin-left: auto;
+        margin-right: auto;
+    }
 `
 export const Title = styled.h3`
     margin: 0;
@@ -83,6 +89,7 @@ export const Title = styled.h3`
 
 `
 export const Paragraph = styled(motion.p)`
+    font-family: 'Noto Serif', serif;
     text-align: justify;
     ${media.medium}{
         font-size: 1.2em;
@@ -98,11 +105,18 @@ export const Button = styled.button`
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 6px 10px;
     font-family: Kanit;
     font-weight: 300;
     cursor: pointer;
     position: relative;
+
+    padding: 10px 0px;
+
+    a{
+        width: 100%;
+        height: 100%;
+        padding: 10px 15px;
+    }
     
     &::before {
         content: '';
@@ -130,14 +144,18 @@ export const Button = styled.button`
 
     ${media.small}{
         margin-top: 20px;
+        font-size: 1.1em;
+
     }
 
     ${media.medium}{
         margin-top: 40px;
+        font-size: 1.3em;
     }
 
     ${media.large}{
         margin-top: 80px;
+        
     }
     
 `

@@ -78,6 +78,12 @@ let techs: logos[] = [
         alt: 'MySQL'
     },
     {
+        id: 15,
+        src: '/postgresql.svg',
+        name: 'PostgreSQL',
+        alt: 'PostgreSQL'
+    },
+    {
         id: 12,
         src: '/git.svg',
         name: 'GIT',
@@ -117,6 +123,11 @@ export const Skills: React.FC = () => {
                                 transition={{ ease: "easeOut", duration: 0.4 }}
                                 whileInView={{ x: 0, y: 0, rotate: 0, opacity: 1 }}
                                 viewport={{ once: true }}
+                                whileHover={{
+                                    y: -10,
+                                    borderColor: '#121212',
+                                    boxShadow: '0px 15px 20px rgba(220, 180, 158, 0.6)',
+                                }}
                                 key={tech.id}
                             >
                                 <Logo >

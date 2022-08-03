@@ -3,20 +3,22 @@ import styled from 'styled-components'
 const media = {
     small: '@media(min-width: 600px)',
     medium: '@media(min-width: 800px)',
-    large: '@media(min-width: 1200px)'
+    large: '@media(min-width: 1200px)',
+    extraLarge: '@media(min-width: 1400px)'
 }
 
 export const Title = styled.div`
-    margin: 50px 0 100px 30px;
+    margin: 50px 1.7em 100px 30px;
     padding-bottom: 6em;
-
+    max-width: 1200px;
+    
     p{
         margin: 0;
         font-weight: 300;
     }
 
     h1{
-        font-size: 2.2em;
+        font-size: 3.2em;
         margin: 0;
         font-weight: 900;
     }
@@ -32,7 +34,7 @@ export const Title = styled.div`
         animation: blink 1s step-start infinite;
     }
 
-    div{
+    .container{
         margin: 10px 0; 
     }
 
@@ -43,9 +45,9 @@ export const Title = styled.div`
     }
     
     ${media.small}{
-        margin-left: 15vw;
+        margin: 0em 3em 15vw 3em;
         h1{
-            font-size: 3em;
+            font-size: 4em;
         }
         h2{
             font-size: 2em;
@@ -54,11 +56,15 @@ export const Title = styled.div`
     }
 
     ${media.medium}{
+        margin-right: 8em;
         display: flex;
         justify-content: flex-end;
         flex-direction: row-reverse;
         padding-bottom: 10em;
-        div{
+        h1{
+            font-size: 3em;
+        }
+        .container{
             margin: 0; 
         }
         margin-left: 8vw;
@@ -73,6 +79,11 @@ export const Title = styled.div`
         }
         padding-top: 4em;
         padding-bottom: 14em;
+        margin: 1.2em 12em 100px 12em;
+    }
+    ${media.extraLarge}{
+        margin-left: auto;
+        margin-right: auto;
     }
 `;
 
@@ -114,4 +125,27 @@ export const Socials = styled.div`
         height: 100%;
     }
     
+`
+
+export const ImgContainer = styled.div`
+    margin-left: auto;
+    width: 20vw;
+    height: 20vw;
+    display: none;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+
+
+    @-webkit-keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+    @keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+
+    ${media.medium}{
+        display: block;
+    }
 `
