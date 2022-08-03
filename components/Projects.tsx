@@ -54,7 +54,7 @@ export const Projects: React.FC = () => {
                                     <TechContainer>
                                         {project.tech.map((tec)=>{
                                             return(
-                                                <Tech>{tec}</Tech>
+                                                <Tech key={tec}> {tec}</Tech>
                                             )
                                         })}
                                     </TechContainer>
