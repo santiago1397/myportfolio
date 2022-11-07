@@ -102,6 +102,9 @@ export const Proj = styled.div`
     flex-direction: column;
     align-items: center;
     margin-bottom: 80px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
 
     ${media.medium}{
         flex-direction: row;
@@ -120,11 +123,18 @@ export const Description = styled.div`
     display: none;
     font-family: 'Noto Serif', serif;
     text-align: justify;
+
+    
     ${media.medium}{
         display: block;
-        font-size: 1.1em;
+        font-size: 1em;
         padding-right: 30px;
         font-weight: 300;
+    }
+
+    ${media.large}{
+        font-size: 1.1em;
+
     }
 `
 
@@ -261,9 +271,14 @@ export const TechContainer = styled.div`
 `
 
 export const Tech = styled.div`
-    border-radius: 10px;
-    padding: 2px 5px;
-    color: black;
-    margin-right: 5px;
-    border: 1px solid black;
+    display: none;
+
+    ${media.medium}{
+        display: block;
+        border-radius: 10px;
+        padding: 2px 5px;
+        color: black;
+        margin-right: 5px;
+        border: 1px solid black;
+    }
 `

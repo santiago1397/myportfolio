@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'Aquire';
+  src: url(/font/AquireLight-YzE0o.otf);
+  src: url(/font/Aquire-BW0ox.otf);
+  src: url(/font/AquireBold-8Ma60.otf);
+}
+
 :root {
-  --primary-color: #dcb49e;
+  --primary-color: 	#d21404;
 }
 
 html,
@@ -7,7 +14,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif, Aquire;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }

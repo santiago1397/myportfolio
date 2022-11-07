@@ -126,7 +126,7 @@ export const Skills: React.FC = () => {
                                 whileHover={{
                                     y: -10,
                                     borderColor: '#121212',
-                                    boxShadow: '0px 15px 20px rgba(220, 180, 158, 0.6)',
+                                    boxShadow: '0px 15px 20px var(--primary-color)',
                                 }}
                                 key={tech.id}
                             >

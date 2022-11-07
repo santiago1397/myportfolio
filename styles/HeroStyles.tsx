@@ -1,12 +1,32 @@
 import styled from 'styled-components'
 
 const media = {
-    extraSmall:'@media(min-width: 400px)',
+    extraSmall: '@media(min-width: 400px)',
     small: '@media(min-width: 600px)',
     medium: '@media(min-width: 800px)',
     large: '@media(min-width: 1200px)',
     extraLarge: '@media(min-width: 1400px)'
 }
+
+export const HomeContainer = styled.div`
+    
+    ${media.extraSmall}{
+
+    }
+
+    ${media.small}{
+        
+    }
+
+    ${media.medium}{
+        margin-top: 60px;
+    }
+
+    ${media.large}{
+
+    }
+
+`
 
 export const Title = styled.div`
     margin: 50px 1.7em 100px 30px;
@@ -19,9 +39,10 @@ export const Title = styled.div`
     }
 
     h1{
+        font-family: Aquire;
         font-size: 2.1em;
         margin: 0;
-        font-weight: 900;
+        font-weight: 500;
     }
 
     h2{
@@ -82,7 +103,7 @@ export const Title = styled.div`
             font-size: 1.3em;
         }
         h1{
-            font-size: 4em;
+            font-size: 5em;
         }
         padding-top: 4em;
         padding-bottom: 14em;

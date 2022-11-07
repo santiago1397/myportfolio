@@ -25,6 +25,15 @@ let projects: projectsData[] = [
     },
     {
         id: 2,
+        src: '/social_app.jpg',
+        code: 'https://github.com/santiago1397/Social_app/',
+        demo: 'https://santiago1397.github.io/Social_app/',
+        name: 'Social app clone',
+        tech: ["react.js","javascript", "Mongodb","Node"],
+        description: "Social media app clone made with Mongodb and React. Some of the features are: register, like, dislike, login, follow, unfollow, profile page and share post and upload image.",
+    },
+    {
+        id: 2,
         src: '/portfolio.png',
         code: 'https://github.com/santiago1397/myportfolio',
         demo: 'myportfolio-santiago1397.vercel.app',

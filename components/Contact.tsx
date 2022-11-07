@@ -61,7 +61,6 @@ export const Contact: React.FC = () => {
 
             <Socials>
                 <div>
-
                     <a href="https://github.com/santiago1397" target="_blank" rel="noopener noreferrer">
                         <AiFillGithub size="100%" />
                     </a>

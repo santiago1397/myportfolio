@@ -31,11 +31,11 @@ export const Navbar: React.FC = () =>{
         <CNavbar active={menu} mask={menuMask}  >
             <MenuBtn mask={menuMask} onClick={() =>{setMenu(menu=>!menu); }}>Menu</MenuBtn>
             <Ul active={menu} contact={contact}>
-                <li><a href="#Home">home</a></li>
-                <li><a href="#About">about</a></li>
-                <li><a href="#Skills">skills</a></li>
-                <li><a href="#Projects">projects</a></li>
-                <li><a href="#Contact">contact</a></li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
             </Ul>
         </CNavbar>
     )

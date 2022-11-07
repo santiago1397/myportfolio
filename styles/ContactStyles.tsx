@@ -8,7 +8,7 @@ const media = {
 }
 
 export const TriangleContainer = styled.div`
-    background-color: #000;
+    background-color: #191919;
 
     .triContainer{
         --triangle-angle: -20vw;
@@ -26,7 +26,7 @@ export const TriangleContainer = styled.div`
         width: 50vw; 
         border-top: var(--triangle-angleP) solid transparent;
         border-bottom: 0vw solid transparent;
-        border-left: 50vw solid #000;
+        border-left: 50vw solid #191919;
 
     }
 
@@ -38,7 +38,7 @@ export const TriangleContainer = styled.div`
         width: 50vw; 
         border-top: var(--triangle-angleP) solid transparent;
         border-bottom: 0vw solid transparent;
-        border-right: 50vw solid #000;
+        border-right: 50vw solid #191919;
 
     }
 `
@@ -141,6 +141,7 @@ export const SubmitBtn = styled.button`
     font-size: 1.3em;
     cursor: pointer;
     display: flex;
+    color: white;
 `
 
 export const SendIcon = styled.div`

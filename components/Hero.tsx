@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Title, Socials, ImgContainer } from '../styles/HeroStyles'
+import { Title, Socials, ImgContainer, HomeContainer } from '../styles/HeroStyles'
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import LetterAnimation from './LetterAnimation'
@@ -10,7 +10,7 @@ import TextAnimationWriting from './TextAnimationWriting'
 export const Hero: React.FC = () => {
 
     return (
-        <div id='Home'>
+        <HomeContainer id='Home' >
 
 
             <Parallax lmao='-2'>
@@ -50,7 +50,7 @@ export const Hero: React.FC = () => {
                     </div>
                 </Title>
             </Parallax>
-        </div>
+        </HomeContainer>
     )
 
 }
