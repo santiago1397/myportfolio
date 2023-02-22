@@ -143,7 +143,7 @@ export const Skills: React.FC = () => {
                                 key={tech.id}
                             >
                                 <Logo >
-                                    <Image src={tech.src} width='80%' height='80%' alt={tech.alt}/>
+                                    <Image src={tech.src} width='80' height='80' alt={tech.alt}/>
                                 </Logo>
                                 <p>{tech.name}</p>
                             </Skill>
