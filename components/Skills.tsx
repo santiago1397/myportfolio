@@ -78,6 +78,12 @@ let techs: logos[] = [
         alt: 'MySQL'
     },
     {
+        id: 16,
+        src: '/mongodb.svg',
+        name: 'MongoDB',
+        alt: 'MongoDB'
+    },
+    {
         id: 15,
         src: '/postgresql.svg',
         name: 'PostgreSQL',
@@ -94,6 +100,12 @@ let techs: logos[] = [
         src: '/java.svg',
         name: 'Java',
         alt: 'Java'
+    },
+    {
+        id: 17,
+        src: '/python.svg',
+        name: 'Python',
+        alt: 'Python'
     },
     {
         id: 14,
